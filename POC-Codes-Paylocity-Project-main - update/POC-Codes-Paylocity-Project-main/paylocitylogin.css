@@ -1,0 +1,125 @@
+* {
+    transition: 0.5s all ease;
+  }
+  body {
+    background: #dfdfdf;
+    margin: auto 0;
+  }
+  #wrapper {
+    max-width: 350px;
+    width: 100%;
+    background: #FF8811;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+  }
+  #curved {
+    width: 110%;
+    text-align: center;
+    background: #FFF8F0;
+    padding: 50px 0px 65px;
+    border-radius: 0px 0px 75% 75%;
+    position: relative;
+    margin-left: -5%;
+    box-shadow: 10px 10px 0px 0px #ed7a07;
+    animation: curvedshadow 4s ease infinite;
+  }
+  @keyframes curvedshadow {
+    0% {
+      box-shadow: 10px 10px 0px 0px #ed7a07;
+    }
+    50% {
+      box-shadow: -10px 10px 0px 0px #ed7a07;
+    }
+    100% {
+      box-shadow: 10px 10px 0px 0px #ed7a07;
+    }
+  }
+  h1 {
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #FF8811;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  form {
+    width: 75%;
+    margin: 0 auto;
+    padding: 25px 0px 25px;
+  }
+  input {
+    margin-top: 30px;
+  }
+  input[type='text'], input[type='password'] {
+    width: 92%;
+    border-radius: 10px;
+    border-color: white;
+    background: #FFF8F0;
+    padding: 8px;
+    outline: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #FF8811;
+    font-size: 16px;
+  }
+  input[type='text']:valid, input[type='password']:valid {
+    /*---------*/
+  }
+  input[type='button'] {
+    width: 100%;
+    margin-top: 25px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #FFF8F0;
+    font-size: 16px;
+    background: #ed7a07;
+  }
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 25px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #FFF8F0;
+    font-size: 16px;
+    background: #ed7a07;
+  }
+
+  input[type='submit']:hover, input[type='button']:active, input[type='submit']:focus {
+    background: #dddddd;
+    animation: submitflip 1s ease;
+  }
+  @keyframes submitflip {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+  .form-field {
+    position: relative;
+  }
+  label {
+    position: absolute;
+    left: 10px;
+    top: 38px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #FF8811;
+  }
+  input:hover + label, input:active + label, input:focus + label, input:valid + label {
+    top: 16px;
+    font-size: 10px;
+    color: #FFF8F0;
+  }
