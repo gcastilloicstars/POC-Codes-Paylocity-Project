@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import ImpressionList from './impressionList';
+import axios from "axios";
 
 function App() {
+  var testList = [
+    {name:"a", description: "impressionA"}, 
+    {name:"b", description: "impressionB"}, 
+    {name:"c", description: "impressionC"}, 
+    {name:"d", description: "impressionD"}, 
+  ]
+  const realList = axios.get("http://localhost:4008/api/impressions");
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <ImpressionList name={"Gio"} impressions={realList}/> 
+
     </div>
   );
 }
